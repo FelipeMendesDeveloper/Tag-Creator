@@ -1,0 +1,19 @@
+===Código===
+
+from random import randint
+text = ''
+tam = int(input('Qual o tamanho da Tag?'))
+
+for c in range(tam):
+    chanceB = randint(1, 3)
+    if chanceB == 1:
+        chanceA = randint(0, 9)
+        text = text + str(chanceA)
+    elif chanceB == 2:
+        chanceA = randint(1, 26)
+        text = text + str(chr(chanceA + 96))
+    else:
+        chanceA = randint(1, 26)
+        text = text + str(chr(chanceA + 64))
+
+print(f'Sua tag é: #{text}')
